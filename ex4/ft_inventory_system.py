@@ -3,10 +3,18 @@ import sys
 
 def main() -> None:
     print("=== Inventory System Analysis ===")
+    args = sys.argv[1:]
+    if len(args) == 0:
+        print(
+            "Error: No arguments provided\n\n"
+            "Usage :  python3 ft_inventory_system.py"
+            "<item:quantity> <item:quantity> ..."
+            "\nExample:  python3 ft_inventory_system.py sword:1 potion:5"
+        )
+        return
 
     inventory: dict[str, int] = {}
-    i: int = 1
-    while i < len(sys.argv):
+    for arg in args:
         arg: str = sys.argv[i]
         i += 1
 
