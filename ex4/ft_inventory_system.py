@@ -32,7 +32,10 @@ def main() -> None:
 
         try:
             qty: int = int(qty_str)
-            inventory.update({item: qty})
+            if qty < 0:
+                print(f"Error: Attempted to set negative quantity {qty} for {item}.")
+            else :
+                inventory.update({item: qty})
         except ValueError:
             print(f"Quantity error for '{item}': "
                   f"invalid literal for int() with base 10: '{qty_str}'")
