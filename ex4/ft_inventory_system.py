@@ -7,7 +7,7 @@ def main() -> None:
     if len(args) == 0:
         print(
             "Error: No arguments provided\n\n"
-            "Usage :  python3 ft_inventory_system.py"
+            "Usage :  python3 ft_inventory_system.py "
             "<item:quantity> <item:quantity> ..."
             "\nExample:  python3 ft_inventory_system.py sword:1 potion:5"
         )
