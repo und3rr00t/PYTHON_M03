@@ -15,9 +15,6 @@ def main() -> None:
 
     inventory: dict[str, int] = {}
     for arg in args:
-        arg: str = sys.argv[i]
-        i += 1
-
         parts: list[str] = arg.split(':')
         if len(parts) != 2:
             print(f"Error - invalid parameter '{arg}'")
